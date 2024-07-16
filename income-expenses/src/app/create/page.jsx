@@ -15,7 +15,7 @@ import dayjs from 'dayjs';
 function CreatePost() {
     const [type, setType] = useState("");
     const [name, setName] = useState("");
-    const [money, setMoney] = useState("");
+    const [money, setMoney] = useState("Number");
     const [record, setRecord] = useState(dayjs());
 
     const router = useRouter();
@@ -23,10 +23,10 @@ function CreatePost() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (!money || !type || !name) {
+        if (!type || !name) {
             alert('Please fill in all required fields');
             return;
-        } else if (isNaN(money)) {
+        } else if (isNaN(money)||!money) {
             alert('Please enter a valid number for the money field');
             return;
         }
@@ -90,7 +90,7 @@ function CreatePost() {
                                 <TextField
                                     label="จำนวนเงิน"
                                     variant="outlined"
-                                    onChange={(e) => setMoney(e.target.value)}
+                                    onChange={(e) => setMoney(parseFloat(e.target.value))}
                                     fullWidth
                                     required
                                 />

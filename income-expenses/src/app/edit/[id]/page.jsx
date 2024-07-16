@@ -117,7 +117,7 @@ function EditPostPage({ params }) {
                                     id="outlined-disabled"
                                     label="จำนวนเงิน"
                                     defaultValue={postData.money}
-                                    onChange={(e) => setMoney(e.target.value)}
+                                    onChange={(e) => setMoney(parseFloat(e.target.value))}
                                     fullWidth
                                 />
                             </Grid>

@@ -46,6 +46,10 @@ export default function Home() {
     return acc;
   }, {});
 
+  if (!postData) {
+    return <div className='px-2 py-2'>Loading...</div>;
+  }
+
   return (
     <main>
       <Container maxWidth="xl" sx = {{p:2}}>

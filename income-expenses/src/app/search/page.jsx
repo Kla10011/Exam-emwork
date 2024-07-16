@@ -67,7 +67,7 @@ function SearchPost() {
             acc[type+"ทั้งหมด"] += money;
         } else {
             acc["รายการ"+type] = 1;
-            acc[type+"ทั้งหมด"] = 0;
+            acc[type+"ทั้งหมด"] = money;
         }
         return acc;
     }, {});
