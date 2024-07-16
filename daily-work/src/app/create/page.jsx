@@ -43,7 +43,7 @@ function Page() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch('./api/save-data.js', {
+        const response = await fetch('D:/Exam-emwork/daily-work/src/app/pages/api/save-data.js', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
